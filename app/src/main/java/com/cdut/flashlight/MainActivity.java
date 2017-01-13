@@ -111,4 +111,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return hasFlash;
     }
 
+    /**
+     * @return 摄像头是否存在
+     */
+    private boolean checkIfCamera(){
+        return getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
+    }
+
 }
