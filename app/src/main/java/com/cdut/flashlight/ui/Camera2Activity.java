@@ -1,4 +1,4 @@
-package com.cdut.flashlight;
+package com.cdut.flashlight.ui;
 
 import android.Manifest;
 import android.annotation.TargetApi;
@@ -30,6 +30,10 @@ import android.view.Surface;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RemoteViews;
+
+import com.cdut.flashlight.constant.Constant;
+import com.cdut.flashlight.utils.LogUtil;
+import com.cdut.flashlight.R;
 
 import java.util.ArrayList;
 import java.util.List;

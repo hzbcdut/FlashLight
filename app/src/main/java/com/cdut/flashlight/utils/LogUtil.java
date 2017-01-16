@@ -1,4 +1,4 @@
-package com.cdut.flashlight;
+package com.cdut.flashlight.utils;
 
 import android.util.Log;
 

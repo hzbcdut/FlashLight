@@ -1,9 +1,11 @@
-package com.cdut.flashlight;
+package com.cdut.flashlight.ui;
 
 import android.annotation.SuppressLint;
 import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.cdut.flashlight.R;
 
 public class ChangeCameraActivity extends AppCompatActivity {
 

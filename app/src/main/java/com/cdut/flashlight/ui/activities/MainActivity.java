@@ -1,4 +1,4 @@
-package com.cdut.flashlight;
+package com.cdut.flashlight.ui.activities;
 
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
@@ -8,6 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.cdut.flashlight.R;
+import com.cdut.flashlight.ui.Camera2Activity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

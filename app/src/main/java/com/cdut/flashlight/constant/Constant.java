@@ -1,4 +1,4 @@
-package com.cdut.flashlight;
+package com.cdut.flashlight.constant;
 
 /**
  * Created by hans on 2016/7/10 0010.

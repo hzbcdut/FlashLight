@@ -1,4 +1,4 @@
-package com.cdut.flashlight;
+package com.cdut.flashlight.ui;
 
 import android.Manifest;
 import android.content.Context;
@@ -19,6 +19,8 @@ import android.util.Size;
 import android.view.Surface;
 import android.view.View;
 import android.widget.Button;
+
+import com.cdut.flashlight.R;
 
 import java.util.ArrayList;
 import java.util.List;
