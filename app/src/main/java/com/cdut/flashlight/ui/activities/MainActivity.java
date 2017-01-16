@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.camera2)
     Button camera2Btn;
 
+    private Button customCamer2Btn;
+
     private Camera mCamera;
 
     @Override
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         ButterKnife.bind(this);  //绑定ButterKnife
-
+        customCamer2Btn = (Button) findViewById(R.id.custom_camera2);
         setListener();
 
     }
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void setListener() {
         openBtn.setOnClickListener(this);
         camera2Btn.setOnClickListener(this);
+        customCamer2Btn.setOnClickListener(this);
     }
 
     @Override
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.camera2:
                 Camera2Activity.start(this);
 //                Camer2DemoActivity.start(this);
+                break;
+            case R.id.custom_camera2:
+                CustomCamera2Activity.start(this); //打开自定义相机
                 break;
         }
     }
