@@ -9,7 +9,7 @@ import android.util.Size;
  * Created by hans on 2017/1/16 0016.
  */
 
-public class Camera2Util {
+public class SpUtil {
 
     /**
      * 初始化所有配置到sharedPreference
@@ -236,5 +236,47 @@ public class Camera2Util {
             str[i] = sp.getInt("previewSizes" + i + "_width", 0) + "*" + sp.getInt("previewSizes" + i + "_height", 0);
         }
         return str;
+    }
+
+
+
+    //----------------------------------------------------------------------------
+
+    public static String getCameraId(Context context) {
+        SharedPreferences preferences;
+        String cameraid;
+        if (context != null) {
+            preferences = context.getSharedPreferences("CameraConfig", Context.MODE_PRIVATE);
+            cameraid = preferences.getString("camera", "0");
+        } else {
+            cameraid = "0";
+        }
+        return cameraid;
+    }
+
+    public static void writeCameraId(Context context, String value) {
+        SharedPreferences preferences = context.getSharedPreferences("CameraConfig", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("camera", value);
+        editor.commit();
+    }
+
+    public static String getCameraFormat(Context context) {
+        SharedPreferences preferences;
+        String format;
+        if (context != null) {
+            preferences = context.getSharedPreferences("CameraConfig", Context.MODE_PRIVATE);
+            format = preferences.getString("format", "JPEG");
+        } else {
+            format = "JPEG";
+        }
+        return format;
+    }
+
+    public static void writeCameraFormat(Context context, String value) {
+        SharedPreferences preferences = context.getSharedPreferences("CameraConfig", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString("format", value);
+        editor.commit();
     }
 }

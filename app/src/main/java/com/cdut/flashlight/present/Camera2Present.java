@@ -10,7 +10,7 @@ import android.hardware.camera2.params.StreamConfigurationMap;
 import android.util.Log;
 import android.util.Size;
 
-import com.cdut.flashlight.utils.Camera2Util;
+import com.cdut.flashlight.utils.SpUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,7 +77,7 @@ public class Camera2Present {
                                     Log.i("Runnable", "camera0--->map.getOutputSizes为空");
                                 }
                             }
-                            Camera2Util.writePreferenceForCameraId(mContext, "camera0", previewSizes, formats, pictureSizes);
+                            SpUtil.writePreferenceForCameraId(mContext, "camera0", previewSizes, formats, pictureSizes);
 
                         }
                         if (cameraIds[1] != null) {//前置摄像头存在
@@ -106,7 +106,7 @@ public class Camera2Present {
                                     Log.i("Runnable", "camera1--->map.getOutputSizes为空");
                                 }
                             }
-                            Camera2Util.writePreferenceForCameraId(mContext, "camera1", previewSizes, formats, pictureSizes);
+                            SpUtil.writePreferenceForCameraId(mContext, "camera1", previewSizes, formats, pictureSizes);
                         }
                     }
                 } catch (CameraAccessException e) {
@@ -114,7 +114,7 @@ public class Camera2Present {
                     return 0;
                 }
                 //初始化一开始打开camera为1的摄像头
-                Camera2Util.writeCurrentCameraid(mContext, "0");
+                SpUtil.writeCurrentCameraid(mContext, "0");
                 return -1;
             }
         }).subscribeOn(Schedulers.io())
